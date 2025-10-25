@@ -1,9 +1,23 @@
 #import "@preview/polylux:0.4.0": *
 #import "@preview/metropolis-polylux:0.1.0" as metropolis
+#import "@preview/codly:1.3.0": *
+#import "@preview/codly-languages:0.1.1": *
+#show: codly-init.with()
+
+#codly(languages: codly-languages)
+
+#show: codly-init.with()
+
+
 #import metropolis: focus, new-section
 
 
 #show: metropolis.setup
+
+#set math.equation(numbering: "1.")
+
+#show math.equation: set text(font: "Fira Math Book")
+
 
 #show link: it => {
   if type(it.dest) == str {
@@ -50,25 +64,53 @@
 
   = A quick word about myself
 
-  Théophile Roos
+  _Théophile Roos_
   - Software engineer at Orness (Parisian consultancy firm).
   - User of Typst since early 2023 (v0.4.0).
+  - Contributor to Typst community packages (glossarium).
+
 ]
 
 #slide[
   = What is Typst
 
-  - Open-Source markup-based typesetting system : modern alternative to LaTeX with a simpler and more readable syntax.
+  Markup-based typesetting system : modern alternative to LaTeX with a simpler and more readable syntax.
 
-  - Fast and instant preview : real-time rendering.
+  - _Markup-based_: like HTML, Markdown or LaTeX, you write plain text with special syntax to indicate formatting instead of using a WYSIWYG editor like Word.
+  - _Typesetting system_: designed for creating high-quality documents with complex layouts, mathematical equations, and professional typography.
 
-  - Powerful programing capabilities : giving more flexibility than LaTeX without needing separate scripting.
-
-  - Cross-platform and browser-friendly – Can be used on the web without compromise (via https://typst.app).
 ]
 
-// sdfsf
-"magick convert"
+#slide[
+  = Typst Syntax
+  #toolbox.side-by-side[
+    ```typst
+    == My doc title
+
+    This is a simple Typst document with an inline.
+
+    $alpha = sum_0^1 a/(beta x)$
+
+    #let document_name = "My document"
+    The document name is #document_name
+
+    ```
+  ][
+    #show: rect
+    #v(30%)
+    == My doc title
+
+    This is a simple Typst document with an inline.
+
+    $alpha = sum_0^1 a/(beta x)$
+
+    #let document_name = "My document"
+    The document name is #document_name
+    #v(50%)
+  ]
+]
+
+
 
 /*
 sdfsf*/
@@ -82,7 +124,7 @@ sdfsf*/
 
   2 main slide toolkit for  Typst
 
-  - _Touying_ (https://touying-typ.github.io/)failed to convert SVG to PDF: The SVG's nesting depth is too high.
+  - _Touying_ (https://touying-typ.github.io/).
   - _Polylux_ (https://polylux.dev/book/) #footnote[this presentation was created using polylux and the #link("https://github.com/polylux-typ/metropolis", "metropolis") theme]
 ]
 
