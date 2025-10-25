@@ -144,3 +144,18 @@ sdfsf*/
   #show: focus
   Thank you for listening.
 ]
+
+#slide[
+  = Some links
+  #set text(size: .8em)
+
+  - Typst official website: #link("https://typst.app", "https://typst.app")
+  - Typst documentation: #link("https://typst.app/docs", "https://typst.app/docs")
+  - Typst community packages: #link("https://typst.app/universe", "https://typst.app/universe")
+  #line(length: 60%)
+  - An in depth article about Typst and it comparison with LaTeX and Word: https://blog.jreyesr.com/posts/typst/
+  - The unofficial Typst example book: https://sitandr.github.io/typst-examples-book/book/getting_started.html
+  - A review of Typst as a programming language: https://justinpombrio.net/2024/11/30/typst.html
+  - _Typst Community_ -> community-driven organization for sustaining software related to the Typst ecosystem.  : https://github.com/typst-community/
+
+]
